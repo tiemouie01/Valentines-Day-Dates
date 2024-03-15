@@ -59,7 +59,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 190px;
+  gap: 175px;
 }
 
 .match p {
@@ -69,4 +69,40 @@ body {
 
 .name {
   font-weight: bolder;
+}
+
+.match > div:nth-child(2) {
+  background-color: #fff;
+  height: 44px;
+  width: 44px;
+  border-radius: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: -32%;
+  left: 130px;
+}
+
+.home-bar {
+  width: 140px;
+  height: 5px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.main > hr {
+  transform: rotate(90deg);
+  width: 200px;
+  height: 2px;
+  background-color: #d22e41;
+  border: 0;
+
+  position: absolute;
+  top: 265px;
+  left: 292px;
 }
