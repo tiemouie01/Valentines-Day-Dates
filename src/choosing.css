@@ -34,4 +34,20 @@ body {
   padding-right: 2.5rem;
 }
 
+.main {
+  height: 762px;
 
+  display: grid;
+  grid-template-rows: 2fr 3fr 1fr 1fr;
+  justify-items: center;
+}
+
+.prompt {
+  width: 307px;
+  align-self: end;
+}
+
+.prompt > p {
+  font-size: 24px;
+  text-align: center;
+}
