@@ -3,18 +3,32 @@
   src: url("./assets/fonts/Inter-Regular.ttf");
 }
 
-body {
-  font-family: "Inter", sans-serif;
-  height: 852px;
-  width: 393px;
-  border: 1px solid black;
+.frame {
+  position: absolute;
+  z-index: 0;
+  top: -32px;
+  left: -16px;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+  background: #000;
+}
+
+#phone {
+  border-radius: 32px;
+  height: 852px;
+  width: 393px;
+  background: #fff;
+  margin-left: 1rem;
+}
 .header {
   color: #fff;
   background-color: #d22e41;
   padding: 8px;
   height: 130px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
 }
 
 .status-bar {
@@ -35,6 +49,10 @@ body {
   display: flex;
   gap: 8px;
   margin-right: 2rem;
+}
+
+.dynamic-island {
+  display: none;
 }
 
 .heading {
@@ -84,8 +102,8 @@ body {
 
 .footer {
   position: absolute;
-  bottom: -32%;
-  left: 130px;
+  bottom: -30%;
+  left: 145px;
 }
 
 .home-bar {
@@ -104,5 +122,9 @@ body {
 
   position: absolute;
   top: 265px;
-  left: 292px;
+  left: 305px;
+}
+
+.visible {
+  display: block;
 }

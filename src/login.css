@@ -10,6 +10,18 @@
 
 body {
   font-family: "Inter", sans-serif;
+  background: #000;
+}
+
+.frame {
+  position: absolute;
+  z-index: 0;
+  top: -24px;
+  left: -15px;
+}
+
+.dynamic-island {
+  opacity: 0;
 }
 
 #phone {
@@ -19,6 +31,8 @@ body {
   background: linear-gradient(#d22e41, #d1061e);
   color: #fff;
   padding-top: 8px;
+  margin-left: 1rem;
+  border-radius: 32px;
 }
 
 .status-bar {
@@ -27,6 +41,8 @@ body {
   align-items: center;
   color: #fff;
   background-color: #d22e41;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
 }
 
 .status-bar > .left {
@@ -71,6 +87,7 @@ button {
   border-radius: 54px;
   background-color: #fff;
   font-weight: bold;
+  font-size: 16px;
   margin-top: 12rem;
   margin-left: 43px;
 }
