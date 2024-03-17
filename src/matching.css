@@ -4,6 +4,12 @@ body {
   background-color: #000;
 }
 
+.frame {
+  position: absolute;
+  top: 12px;
+  left: 1px;
+}
+
 #phone {
   height: 852px;
   width: 393px;
@@ -19,6 +25,8 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #d22e41;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
 }
 
 .status-bar > .left {
@@ -51,4 +59,59 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #fff;
+}
+
+.match-container {
+  justify-self: center;
+  display: grid;
+  grid-template-columns: minmax(340px, 353px);
+  grid-template-rows: repeat(5, minmax(50px, 64px));
+  gap: 12px;
+
+  padding-top: 1rem;
+}
+
+.match {
+  background-color: #e1e1e1;
+  border-radius: 16px;
+
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  align-items: center;
+}
+
+.match > .details {
+  grid-column: 1;
+  font-size: 16px;
+  padding-left: 1rem;
+}
+
+.details * {
+  margin: 0;
+  padding: 0;
+}
+
+.details > p:first-child {
+  font-weight: bold;
+}
+
+.match > .symbol {
+  grid-column: 2;
+  background-color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+hr {
+  width: 140px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #000;
+  border: 0;
+  align-self: end;
 }
