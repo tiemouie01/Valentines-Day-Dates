@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Regular.ttf");
+}
+
 body {
   font-family: "Inter", sans-serif;
   color: #000;
@@ -97,10 +102,13 @@ body {
 
 .match > .symbol {
   grid-column: 2;
+  justify-self: end;
+
   background-color: #fff;
   width: 44px;
   height: 44px;
   border-radius: 100%;
+  margin-right: 0.5rem;
 
   display: flex;
   align-items: center;
