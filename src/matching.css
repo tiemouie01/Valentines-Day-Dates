@@ -1,0 +1,54 @@
+body {
+  font-family: "Inter", sans-serif;
+  color: #000;
+  background-color: #000;
+}
+
+#phone {
+  height: 852px;
+  width: 393px;
+  background: #fff;
+  margin-left: 2rem;
+  margin-top: 3rem;
+  border-radius: 32px;
+}
+
+.status-bar {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d22e41;
+}
+
+.status-bar > .left {
+  display: flex;
+  gap: 6px;
+  padding-left: 3rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.status-bar > .right {
+  display: flex;
+  gap: 6px;
+  padding-right: 2.5rem;
+}
+
+.main {
+  height: 792px;
+
+  display: grid;
+  grid-template-rows: minmax(40px, 70px) 6fr 1fr;
+}
+
+.heading {
+  background-color: #d22e41;
+  padding-left: 1rem;
+}
+
+.heading > p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
