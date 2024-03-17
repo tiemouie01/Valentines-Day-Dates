@@ -8,76 +8,74 @@
   src: url("./assets/fonts/KaushanScript-Regular.ttf");
 }
 
-body {
-  font-family: "Inter", sans-serif;
-  background: #000;
-}
-
 .frame {
   position: absolute;
-  z-index: 0;
-  top: -24px;
-  left: -15px;
+  top: 12px;
+  left: 1px;
 }
 
-.dynamic-island {
-  opacity: 0;
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
 }
 
 #phone {
   height: 852px;
   width: 393px;
-  border: 1px solid black;
   background: linear-gradient(#d22e41, #d1061e);
-  color: #fff;
-  padding-top: 8px;
-  margin-left: 1rem;
+  margin-left: 2rem;
+  margin-top: 3rem;
   border-radius: 32px;
 }
 
 .status-bar {
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
-  background-color: #d22e41;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
 }
 
 .status-bar > .left {
   display: flex;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: bold;
-  margin-left: 2rem;
+  gap: 6px;
+  padding-left: 3rem;
 }
 
 .status-bar > .right {
   display: flex;
-  gap: 8px;
-  margin-right: 2rem;
+  gap: 6px;
+  padding-right: 2.5rem;
 }
 
 .main {
-  height: 500px;
+  height: 792px;
+
+  display: grid;
+  grid-template-rows: 5fr 2fr 1fr 0.5fr;
+  justify-items: center;
 }
 
-h1,
-h2 {
-  font-family: "Kaushan Script", serif;
-  text-align: center;
+.main > .title {
+  display: grid;
+  justify-items: center;
+}
+
+.title * {
+  font-family: "Kaushan Script", "sans-serif";
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  margin-top: 12rem;
-  font-size: 59px;
+.title > p:first-child {
+  font-size: 56px;
+  align-self: end;
 }
 
-h2 {
+.title > p:nth-child(2) {
   font-size: 36px;
+  align-self: start;
 }
 
 button {
@@ -85,24 +83,21 @@ button {
   height: 48px;
   border: 0;
   border-radius: 54px;
-  background-color: #fff;
-  font-weight: bold;
   font-size: 16px;
-  margin-top: 12rem;
-  margin-left: 43px;
-}
-
-.home-bar {
-  width: 140px;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 5px;
+  font-weight: bold;
+  align-self: end;
+  margin-bottom: 2rem;
 }
 
 .version {
-  text-align: center;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 4.5rem;
+  align-self: end;
+}
+
+hr {
+  width: 140px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 0;
+  align-self: end;
 }
