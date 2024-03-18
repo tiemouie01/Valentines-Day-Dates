@@ -51,10 +51,18 @@ const showUi = function makeCellPhoneAppear(data) {
 };
 
 const hideUi = function makeCellPhoneDisappear() {
+  const phone = currentPage.contentDocument.querySelector(".phone");
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" || event.code === "Escape") {
-      currentPage.classList.toggle("off");
+      phone.classList.toggle("show");
+      phone.classList.toggle("hide");
     }
+  });
+
+  const homeBar = currentPage.contentDocument.querySelector(".home-bar");
+  homeBar.addEventListener("click", () => {
+    phone.classList.toggle("show");
+    phone.classList.toggle("hide");
   });
 };
 
