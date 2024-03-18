@@ -1,130 +1,29 @@
-@font-face {
-  font-family: "Inter";
-  src: url("./assets/fonts/Inter-Regular.ttf");
-}
-
-.frame {
-  position: absolute;
-  z-index: 0;
-  top: -32px;
-  left: -16px;
-}
-
 body {
-  font-family: "Inter", sans-serif;
-  background: #000;
+  height: 100vh;
 }
 
-#phone {
-  border-radius: 32px;
-  height: 852px;
-  width: 393px;
-  background: #fff;
-  margin-left: 1rem;
-}
-.header {
-  color: #fff;
-  background-color: #d22e41;
-  padding: 8px;
-  height: 130px;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none; /* Optional: remove border */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.status-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.status-bar > .left {
-  display: flex;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: bold;
-  margin-left: 2rem;
-}
-
-.status-bar > .right {
-  display: flex;
-  gap: 8px;
-  margin-right: 2rem;
-}
-
-.dynamic-island {
+.off {
   display: none;
 }
 
-.heading {
-  font-weight: bold;
-  font-size: 24px;
-  padding-top: 1rem;
-  padding-left: 0.5rem;
+.hide {
+  animation: hide 1s ease-in;
 }
 
-.main {
-  padding: 20px;
-}
-
-.match {
-  width: 353px;
-  height: 64px;
-  background-color: #e1e1e1;
-  border-radius: 0.75rem;
-  margin-bottom: 1rem;
-  font-size: 16px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 175px;
-}
-
-.match p {
-  margin: 0;
-  padding: 0;
-}
-
-.name {
-  font-weight: bolder;
-}
-
-.match > div:nth-child(2) {
-  background-color: #fff;
-  height: 44px;
-  width: 44px;
-  border-radius: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  position: absolute;
-  bottom: -30%;
-  left: 145px;
-}
-
-.home-bar {
-  width: 140px;
-  height: 5px;
-  background-color: black;
-  border-radius: 5px;
-}
-
-.main > hr {
-  transform: rotate(90deg);
-  width: 200px;
-  height: 2px;
-  background-color: #d22e41;
-  border: 0;
-
-  position: absolute;
-  top: 265px;
-  left: 305px;
-}
-
-.visible {
-  display: block;
+@keyframes hide {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(1000px);
+  }
 }

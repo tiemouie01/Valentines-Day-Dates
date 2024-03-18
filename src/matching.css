@@ -22,6 +22,17 @@ body {
   margin-left: 2rem;
   margin-top: 3rem;
   border-radius: 32px;
+  animation: appear 1s ease-out;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(1000px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .status-bar {
@@ -115,11 +126,14 @@ body {
   justify-content: center;
 }
 
-hr {
+.home-bar {
   width: 140px;
   height: 5px;
   border-radius: 5px;
   background-color: #000;
   border: 0;
   align-self: end;
+  justify-self: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
