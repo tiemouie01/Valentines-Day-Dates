@@ -14,16 +14,3 @@ iframe {
 .off {
   display: none;
 }
-
-.hide {
-  animation: hide 1s ease-in;
-}
-
-@keyframes hide {
-  0% {
-    transform: translate(0);
-  }
-  100% {
-    transform: translate(1000px);
-  }
-}

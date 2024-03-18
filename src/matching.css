@@ -15,23 +15,46 @@ body {
   left: 1px;
 }
 
-#phone {
+.phone {
   height: 852px;
   width: 393px;
   background: #fff;
   margin-left: 2rem;
   margin-top: 3rem;
   border-radius: 32px;
+  opacity: 0;
+}
+
+.show {
   animation: appear 1s ease-out;
+  opacity: 1;
 }
 
 @keyframes appear {
   0% {
+    opacity: 0;
     transform: translateY(1000px);
   }
 
   100% {
+    opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.hide {
+  animation: disappear 1s ease-in;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(1000px);
   }
 }
 
@@ -135,5 +158,6 @@ body {
   align-self: end;
   justify-self: center;
   margin-bottom: 1rem;
+  z-index: 9999999;
   cursor: pointer;
 }

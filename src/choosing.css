@@ -16,13 +16,47 @@ body {
   background-color: #000;
 }
 
-#phone {
+.phone {
   height: 852px;
   width: 393px;
   background: linear-gradient(#d22e41, #d1061e);
   margin-left: 2rem;
   margin-top: 3rem;
   border-radius: 32px;
+  opacity: 0;
+}
+
+.show {
+  animation: appear 1s ease-out;
+  opacity: 1;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(1000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hide {
+  animation: disappear 1s ease-in;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(1000px);
+  }
 }
 
 .status-bar {
@@ -109,11 +143,15 @@ button {
   align-self: end;
 }
 
-hr {
+.home-bar {
   width: 140px;
   height: 5px;
   border-radius: 5px;
   background-color: #000;
   border: 0;
   align-self: end;
+  justify-self: center;
+  margin-bottom: 1rem;
+  z-index: 9999999;
+  cursor: pointer;
 }
