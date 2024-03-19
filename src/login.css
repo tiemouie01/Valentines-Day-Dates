@@ -136,6 +136,15 @@ button {
   align-self: end;
   justify-self: center;
   margin-bottom: 1rem;
-  z-index: 9999999;
+  z-index: 99;
   cursor: pointer;
+}
+
+a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  padding-top: 0.9rem;  
+  color: #000;
+  position: relative;
 }
