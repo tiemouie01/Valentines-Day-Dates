@@ -1,20 +1,20 @@
 // Test new account
-// const data = {
-//   hasAccount: false,
-// };
+const data = {
+  hasAccount: false,
+};
 
 // Test overview
-const data = {
-  hasAccount: true,
-  users: [
-    {
-      id: 0,
-      gender: false,
-      firstname: "Tom",
-      lastname: "Tomato",
-    },
-  ],
-};
+// const data = {
+//   hasAccount: true,
+//   users: [
+//     {
+//       id: 0,
+//       gender: false,
+//       firstname: "Tom",
+//       lastname: "Tomato",
+//     },
+//   ],
+// };
 
 // Test overview scroll
 // let data = {
@@ -35,6 +35,8 @@ const data = {
 //       … Many other users
 //    ]
 // };
+
+// Show UI
 
 let currentPage;
 
@@ -68,3 +70,24 @@ const hideUi = function makeCellPhoneDisappear() {
 
 showUi(data);
 hideUi();
+
+
+// Create account functionality
+
+const userAccount = {
+  "firstname": "",
+  "lastname": "",
+  "gender": "",
+  "interest": "",
+}
+
+const createUserAccount = () => {
+  const signupPage = document.querySelector(".signup").contentDocument;
+
+  const createAccountButton = signupPage.querySelector('button[type="submit"]');
+  createAccountButton.addEventListener("click", () => {
+    userAccount.firstname = signupPage.getElementById("fname");
+    userAccount.lastname = signupPage.getElementById("sname");
+    userAccount.gender = signupPage.querySelector("input[name=\"gender\"]:checked").value;
+  })
+}
