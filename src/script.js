@@ -1,5 +1,3 @@
-import "./style.css"
-
 // Test new account
 const data = {
   hasAccount: false,
